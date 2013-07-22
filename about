@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>About &middot; Kestrel Blackmore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hey! My name is Kestrel Blackmore and I’m a keen software developer, husband, father of three kids and Christian. Here&#39;s a little of my work career bio.">
+    <meta name="author" content="Kestrel Blackmore">
+
+    <!-- CSS -->
+    <link href="/assets/css/metro-bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
+    <!--<link href="/assets/css/docs/font-awesome.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico")">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png")">
+  </head>
+
+  <body>
+
+
+    <!-- Part 1: Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Begin page content -->
+      <div class="container">
+        
+        <div class="row hidden-desktop hidden-tablet"> <!-- start responsive menu -->
+
+          <div class="span12">
+            
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">Menu</a>
+                  <div class="nav-collapse">
+                    <ul class="nav">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/about">About</a></li>
+                      <li><a href="/archives">Archives</a></li>
+                    </ul>
+                    
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div>
+
+
+          </div>
+        </div> <!-- end responsive menu -->
+
+        <div class="row">
+   
+          <div class="span10"> <!-- start main content -->
+            
+
+<section id="page_title">
+    <div class="page-header">
+        <h1>About <small>Kestrel Blackmore</small></h1>
+    </div>
+</section>
+
+<section id="page_content">
+    <p>Hey! My name is Kestrel Blackmore and I’m a keen software developer, sometimes musician, husband, father of three and Christian. I've recently given my online presence a real shot in the arm.</p>
+    <p>Back in 1997 whilst studying Computing at <a title="Victoria University" href="http://www.vu.edu.au">Victoria University</a> I got my first full time job working for the universities I.T. department. Over the next four years I worked in different roles ranging from desktop support to system administration and network administration. I would have to admit it is among some of my most favourite memories because I was having a blast and doing it with great friends and colleagues.</p>
+    <p>I then decided it was time to go out into the real world and joined dot com startup <a title="ip3" href="http://www.ip3systems.com">iP3</a> working on developing a B2B and B2C eCommerce Supply Chain software. I have a lot of fond memories here  in particular when the development team was sent to Christchurch, New Zealand, for three months so that we could work directly with <a title="Jade Corporation" href="http://jadeworld.com">Jade Corporation</a>.</p>
+    <p>In 2004 I was approached by <a title="Information Process Technology" href="http://iptsystems.com">Information Process Technology</a> to come on board and develop their online EDI Bureau Service. I didn’t know anything about Electronic Data Interchange (EDI) but my boss was an absolute EDI guru so, with his guidance, we developed several new online services that aided both our clients as well as our own internal systems. Some of my proudest moments at IPT were being involved in major projects with Country Road, Spotlight, Oroton Group and Pacific Networks.</p>
+    <p>In 2009 my career took a completely different direction as I took a position with <a title="Australian Food Training Centre" href="http://australianfoodtraining.com.au">Australian Food Training Centre</a> as a workplace trainer specialising in the food industry. It was during this time that I started to delve into Ruby on Rails and was blown away by its simplicity and power. Whilst here I developed the <a href="http://www.qualityindicatorspro.com.au">Quality Indicators Pro</a> system using Ruby on Rails. I designed and developed everything for that product including the sales website and help videos! It was an awesome experience. </p>
+    <p>Fast forward to 2011 and I started my own Web Design/Development business called <a title="Blackmore Websites" href="http://www.blackmorewebsites.com.au">Blackmore Websites</a>. Having recently become a full Ruby on Rails devotee I developed a Job Booking system for a national franchisor and again was hugely grateful for the speed and ease with which RoR allows you to develop products. I wish I had known about it in the early years of my career! Don’t get me wrong, I still love .NET but it’s always good to branch out and experience other languages to get different perspectives.</p>
+    <p>At the start of 2012 I again rejoined the workforce as running my own business was not conducive to having a young, growing family. By this stage our third child had been born and I needed a regular income. I landed a developer position with <a href="http://www.cavendishsuper.com.au">Cavendish Superannuation</a> as one of their developers and boy was it good to be working with other people again. It was here that I honed my .NET skills again and worked on moving some paper based application forms online learning the intricate and frustrating details of the ASP.NET Wizard control.</p>
+    <p>After close to six months with Cavendish the owners of the company sold it to AMP. The owners also had another company called <a href="http://www.bendzulla.com">Bendzulla Actuarial</a> and I was asked to come across and head up their software development team. It has been an exciting time at Bendzulla with our development team growing and processes being finely tuned. Watch this space!!</p>
+    <p>cheers,<br/>
+    Kestrel</p>
+</section>
+
+          </div> <!-- end main content -->
+          
+
+          <div class="span2 hidden-phone"> <!-- start sidebar -->
+            
+            <h3>&nbsp;</h3>
+
+            <ul class="nav nav-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/archives">Archives</a></li>
+              <li class="nav-header">Projects</li>
+              <li><a href="#">BlogMatrix</a></li>
+              <li><a href="#">VC Registrations</a></li>
+            </ul>
+
+          </div> <!-- end sidebar -->
+         
+
+        </div> <!-- row -->
+
+      </div> <!-- container -->
+
+    </div> <!-- wrap -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="/assets/docs/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-alert.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-button.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="/assets/docs/bootstrap-typeahead.js"></script>
+    <script type="text/javascript" src="/assets/docs/jquery.validate.js"></script>
+    <script type="text/javascript" src="/assets/docs/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript" src="/assets/docs/jquery.unobtrusive-ajax.js"></script>
+    
+
+  </body>
+</html>
+
