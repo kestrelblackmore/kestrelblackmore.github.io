@@ -3,9 +3,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Rails 3 and Bundler &middot; Kestrel Blackmore</title>
+    <title>Validate Email Address using Regular Expressions &middot; Kestrel Blackmore</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Some useful bundler commands in Rails 3.">
+    <meta name="description" content="A regular expression to check an email address is valid.">
     <meta name="author" content="Kestrel Blackmore">
 
     <!-- CSS -->
@@ -76,26 +76,13 @@
 <section id="page_title">
     
     <div class="page-header">
-        <h2>Rails 3 and Bundler</h2>
+        <h2>Validate Email Address using Regular Expressions</h2>
     </div>
 </section>
 
 <section id="page_content">
-    <p class="lead">Some useful bundler commands in Rails 3.</p>
-    
-    <p>
-        <pre>
-gem install bundler #installs bundler
-bundle install #reads gem list from Gemfile and installs them
-bundle check #check gem list from Gemfile and sees if any aren't installed yet
-bundle help #lists available commands
-bundle install --without=test #like install but ignores test env gems
-bundle lock #freezes gems to current versions
-bundle install --relock #unlock gems, update and lock again
-bundle pack #installs gems locally to vendor/cache
-</pre>
-    </p>
-
+    <p class="lead">Here’s a very simple way to validate an email address using regex.</p>
+    <pre>^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,9}$</pre>
 </section>
 
 
