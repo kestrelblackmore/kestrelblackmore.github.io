@@ -3,9 +3,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>BlogMatrix &middot; Kestrel Blackmore</title>
+    <title>BlogMatrix - A Brief Overview &middot; Kestrel Blackmore</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Information on my very simple blog engine called BlogMatrix">
+    <meta name="description" content="The actual project structure for my blog engine called BlogMatrix">
     <meta name="author" content="Kestrel Blackmore">
 
     <!-- CSS -->
@@ -73,7 +73,7 @@
 
 <section id="page_title">
     <div class="page-header">
-        <h2>BlogMatrix <small>a very simple blog engine</small></h2>
+        <h2>BlogMatrix - A Brief Overview</h2>
     </div>
 </section>
 
@@ -95,52 +95,99 @@
 </section>
 
 
-    <p class="lead">BlogMatrix is a very simple blog engine that I created. In fact the page you are reading right now was created with it. There's 
-        no database, just pure HTML, CSS and jQuery. Read on to see how I did it.</p>
+    <p class="lead">BlogMatrix uses WebMatrix as the development environment (hence the word Matrix in my blog engine name). WebMatrix is a great little web development tool for creating websites that use
+    the Razor view engine and C#. Unlike most frameworks you can pretty much come up with whatever project structure you want. Let's take a 10,000 foot view of what I did.</p>
     
-    <p>I'd always wanted to create my own blog engine purely for the heck of it and the geek factor.
-     Over the years I wrote several versions
-    with varying success but in the end I always lost steam as I switched to using the 'latest and greatest programming language'. Ruby on Rails, ASP.NET MVC, Sinatra and Nancy I tried them all. 
-    Don't get me wrong they are all great tools but I was constantly getting bogged down in the technology.</p>
+    <p>My goal here was to come up with a simple, logical project structure with the minimal amount of coding required. Drawing on my experience with RoR and various other conventions I'd adopted over the
+        years this is what I came up with. </p>
 
-    <p>In the end I sat down and wrote out the bare essentials for my blog engine. This is what I came up with:</p>
+    <h3>File / Directory Structure</h3>
+    <p>Firstly let me show you the file/directory structure of my projects:</p>
+
+    <pre>
+assets/
+blog/
+layouts/
+layouts/_BlogLayout.cshtml
+layouts/_SiteLayout.cshtml
+partials/
+partials/_Archives.cshtml
+partials/_Disqus.cshtml
+projects/
+projects/blogmatrix.cshtml
+404.cshtml
+about.cshtml
+archives.cshtml
+index.cshtml
+    </pre>
+
+    <p>As you can see the structure is very simple, logical and self documenting. Due to the way I have structure the project most of my time is spent in the blog directory.</p>
+    
+    <ul>
+        <li>The <em>assets</em> directory is for all of my CSS and Javascripts.</li>
+        <li>The <em>blog</em> directory contains an individual cshtml file for each post.</li> 
+        <li>The <em>layouts</em> directory is for the templates which are used to define the layout of all the pages.</li> 
+        <li>The <em>partials</em> directory is used for snippets that will get included in other pages.</li> 
+        <li>The <em>projects</em> directory is just a logical grouping for my various projects.</li> 
+        <li>Finally the <em>root</em> directory contains cshtml files that are pretty self explanatory :)</li>
+    </ul>
+
+    <h3>Razor Pages</h3>
+
+    <p>Let's have a look at the 404.cshtml file so you can see exactly how a Razor Page work.</p>
+
+    <pre class="prettyprint">
+    
+@{
+    Layout = &#39;~/layouts/_SiteLayout.cshtml&#39;;
+    Page.Title = &#39;Page Not Found&#39;;
+}
+
+&lt;section id=&#39;page_title&#39;&gt;
+    &lt;div class=&#39;page-header&#39;&gt;
+        &lt;h1&gt;404 &lt;small&gt;@Page.Title&lt;/small&gt;&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id=&#39;page_content&#39;&gt;
+    &lt;p&gt;Sorry but the page you are looking for can&#39;t be found!&lt;/p&gt;
+    &lt;p&gt;Please try one of the links in the menu.&lt;/p&gt;
+&lt;/section&gt;
+    
+    </pre>
+
+    <p>This is a very simple razor page and I really want to focus on the section at the top in between the <code>@{}</code> symbols.</p>
+
+    <p>The use of <code>@{}</code> tells razor that you are defining a block of code to be processed. Within it there are two assignment declarations:</p>
     <ol>
-        <li>Free hosting</li>
-        <li>Uses git for deployment</li>
-        <li>Makes use of layouts and partials</li>
-        <li>Responsive design</li>
-        
-        
+        <li><code>Layout = '~/layouts/_SiteLayout.cshtml';</code></li>
+        <li><code>Page.Title = 'Page Not Found';</code></li>
     </ol>
 
-    <p>The solution I came up with was <b><a href="https://github.com/kestrelblackmore/BlogMatrix">BlogMatrix which you can view on GitHub</a></b>. 
-        How simple is it you ask? Here are the solutions I ended up with.</p>
+    <p>The first line is telling razor what to use as the <em>layout/template</em> for this page. <code>Layout</code> is a builtin razor variable specifically for this purpose.</p>
 
-    <h3>1. Free hosting</h3>
-    <p>The downside of using tools such as RoR, ASP.NET MVC or Node is that you have to host it on a specific environment and 
-        unfortunately those environments always cost money if you want to use a custom domain name. Throw in a database and you are talking more costs.</p>
-    <p>This meant I had to come up with a blog engine that would output pure HTML. Once you have pure HTML your hosting options increase significantly.</p>
-    <p><b>Hosting Solution:</b> <a href="http://pages.github.com/" target="_blank">GitHub Pages</a>. By now I'm hoping you've heard of GitHub and are using it for hosting your projects. 
-    What some people don't realise is that you can also use it for HTML hosting and <strong>it is free!</strong> <a href="http://pages.github.com/" target="_blank">Instructions on how to set this up are here</a>.</p>
+    <p>The second line sets up a dynamic property on the <code>Page</code> object (this is another builtin razor variable) called <code>Title</code>. This is then used on the 7th line (h1 tag) and is also 
+        used in the <em>~/layouts/_SiteLayout.cshtml</em> to set the title tag. If you <a href="404" target="_blank">goto the 404 page</a> you will see what I mean.</p>
+    
+    <p>Here's the first few lines of the <em>~/layouts/_SiteLayout.cshtml</em> file so you can see how <code>@Page.Title</code> is used.</p>
 
-    <h3>2. Uses git for deployment</h3>
-    <p>I wanted the easiest deployment process possible. This ruled out such arcane methods as FTP, having to log onto the deployment server or configuring a complex deployment utility such as capistrano.</p>
-    <p>My deployment process had to be as simple as: <code>git push</code>. Can't get much simpler than that!</p>
-    <p><b>Deployment Solution:</b> <a href="http://pages.github.com/" target="_blank">Once again GitHub Pages</a>. Being created by GitHub obviously they allow you to deploy using git :)</p>
+    <pre class="prettyprint">
+    
+@{
+}
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#39;en&#39;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&#39;utf-8&#39;&gt;
+    &lt;title&gt;@Page.Title &amp;middot; Kestrel Blackmore&lt;/title&gt;
+    
+    </pre>
 
-    <h3>3. Makes use of layouts and partials</h3>
-    <p>I could have just marked everything up straight in HTML but this would become tedious if I needed to add a new menu item. I'd have to edit every single 
-    HTML page to add it. Forget that!</p>
-    <p><b>Layout Solution:</b> <a href="http://www.microsoft.com/web/webmatrix/">WebMatrix</a>. WebMatrix is a very simple web development tool which is similar in concept to PHP and classic ASP. 
-        It provides some of the power of ASP.NET MVC (razor view engine, layouts etc) without the added bloat. <a href="http://tekpub.com/blogs/tekpub-free-bin/tagged/hacking-webmatrix">Here's an excellent tutorial series by Rob Conery at TekPub</a>.</p>
-
-    <h3>4. Responsive design</h3>
-    <p>Finally I wanted the blog to look good on any device whether it be a desktop, laptop or mobile device. I also didn't want to have to come up with
-    my own custom CSS library as I'm not a web developer. I wanted a standardised grid system with access to all the new features you see on modern websites.</p>
-    <p><b>Responsive Solution:</b> <a href="http://twitter.github.io/bootstrap/">Twitter Boostrap</a> with <a href="http://talkslab.github.io/metro-bootstrap/">Metro-Bootstrap Theme</a></b>.
-    This was a no brainer. Twitter Bootstrap is an excellent HTML/CSS/jQuery framework with all the bells in whistles. It also has built in support for
-        creating responsive design websites. I used the Metro-Bootstrap theme because I liked the look of it and flat design is 'so hot right now'.
-    </p>
+    <h3>Conclusion</h3>
+    <p>That's a very quick overview of the project structure and how a razor page works. 
+        If you view the <a href="https://github.com/kestrelblackmore/BlogMatrix" target="_blank">BlogMatrix GitHub repository</a> you'll very quickly figure out how it all ties together and the simplicity of my 'blog engine'.</p>
+    <p>Next post I'll be looking at how I actually deploy the website to pure HTML.</p>
+    <p>Happy coding!</p>
 
 </section>
 
