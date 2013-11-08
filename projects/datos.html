@@ -3,9 +3,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Rails 3 and Bundler &middot; Kestrel Blackmore</title>
+    <title>Datos. Adventures with Data Structures &middot; Kestrel Blackmore</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Some useful bundler commands in Rails 3.">
+    <meta name="description" content="Information on my data structures project called Datos">
     <meta name="author" content="Kestrel Blackmore">
 
     <!-- CSS -->
@@ -73,27 +73,60 @@
 
 
 <section id="page_title">
-    
     <div class="page-header">
-        <h2>Rails 3 and Bundler</h2>
+        <h2>Datos. Adventures with Data Structures</h2>
     </div>
 </section>
 
 <section id="page_content">
-    <p class='lead'>Some useful bundler commands in Rails 3.</p>
     
-    <p>
-        <pre>
-gem install bundler #installs bundler
-bundle install #reads gem list from Gemfile and installs them
-bundle check #check gem list from Gemfile and sees if any aren't installed yet
-bundle help #lists available commands
-bundle install --without=test #like install but ignores test env gems
-bundle lock #freezes gems to current versions
-bundle install --relock #unlock gems, update and lock again
-bundle pack #installs gems locally to vendor/cache
-</pre>
-    </p>
+
+<section id="blog">
+    <div class="alert alert-warning">
+    <p><strong>This page is part of a series on my data structures project called Datos.</strong> The full series is listed below. Enjoy.</p>
+    <dl>
+        <dd><a href="/projects/datos">1) Datos. Adventures with Data Structures</a></dd>
+    </dl>
+    </div>
+
+    
+   
+</section>
+
+
+    <p class='lead'>Datos is spanish for Data. It's also the name of my project to implement some of the more common data structures. 
+        If you haven't looked at data structures since your uni days then this series is for you.</p>
+    
+    <p>Let's face it. Most programming languages have abstracted away the need to understand the finer details of data structures. At least that's the case for your average programmer. We use an array here, a collection there, maybe an occasional dictionary and we've pretty much got most bases covered. </p>
+    
+    <p>However it is important to understand the fundamentals of data structures so you are aware of their complexity. The complexity will help you decide which data structure to use. For example:</p>
+    
+    <ul>
+        <li>how much memory is used (less important nowadays)</li>
+        <li>speed to perform adding, removing and searching operations</li>
+    </ul>
+
+    <p><a href="/blog/big-o-notation-complexity">Big O Notation</a> is a huge help here. If you need a refresher be sure to read my <a href="/blog/big-o-notation-complexity">previous blog post</a> on the topic. </p>
+
+    <h3>Which Data Structures?</h3>
+
+    <p>I'm going to keep it fairly simple and will be looking at the following data structures:</p>
+
+    <ul>
+        <li>Linked Lists</li>
+        <li>Binary Search Tree</li>
+        <li>Heap</li>
+        <li>Sets</li>
+        <li>Queues</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+
+    <p>That's it for now. You can view my <a href="https://github.com/kestrelblackmore/Datos">Datos GitHub repository</a> to see the work I've done so far on linked lists. I'll have a post covering these shortly.</p>
+
+    <p>Until then <em>Hasta luego!</em></p>
+    
+    
 
 </section>
 
@@ -111,6 +144,24 @@ bundle pack #installs gems locally to vendor/cache
     </div>
 </div>
 
+<div class="row">
+    <div class="span10"><hr></div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kestrelblackmore'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
           </div> <!-- end main content -->
